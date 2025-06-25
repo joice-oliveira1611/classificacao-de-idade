@@ -1,35 +1,35 @@
-<!DOCTYPE html>
-<html lang="pt BR">
+
+        <!DOCTYPE html>
+<html lang="pt-BR">
     <head>
         <meta charset="UTF-8">
         <title> Meu primeiro Programa</title>
         </head>
         <body style="font-family:Arial sans-serif; background-color:wheat">
             <h1>Classificacao por idade</h1>
-            <label>digite sua idade:<input type="number"id="idade"></label><br><br>
-<button onclick="classificaridade()">classificar</button>
+            <label>digite sua idade: <input type="number" id="idade"></label><br><br>
+<button onclick="classificarIdade()">Classificar</button>
 <p id="classificacao"></p>
         
 <script>
     function classificaridade() {
-        let idade= parseInt(document.getElementById("idade").value);
-        let categoria="";
+        let idade = parseInt(document.getElementById("idade").value);
+        let categoria = "";
 
-        if (isNaN(idade)|| idade<o){
+        if (isNaN(idade)|| idade < 0){
             categoria = "idade invalida.";
-        } else if (idade<3){
-            categoria= "bebe";
-        } else if (idade <=12) {
+        } else if (idade <= 3){
+            categoria = "bebe";
+        } else if (idade <= 12) {
             categoria ="criança";
-        } else if (idade<=17){
-            categoria= "adolescente";
-        } else if (idade <=59){
+        } else if (idade<= 17){
+            categoria = "adolescente";
+        } else if (idade <= 59){
             categoria = "adulto";
         } else {
-            categorian= "idoso";
+            categoria = "idoso";
         }
-
-        document.getElementById("classificacao").innerText="categoria:"+ categoria;
+document.getElementById("classificacao").innerText="categoria:"+ categoria;
     }
     </script>
    
